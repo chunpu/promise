@@ -1,6 +1,8 @@
-var p = Promise
-!function() {
-
+!function(f) {
+  if ('object' == typeof exports) module.eports = f()
+  else if ('function' == typeof define && define.amd) define(f)
+  else if (typeof window != 'undefined') window.Promise = f()
+}(function() {
   function Promise(resolver) {
     var queue = []
     resolver(resolve, reject)
@@ -82,6 +84,5 @@ var p = Promise
     })
     return result
   }
-
-  window.Promise = Promise
-}()
+  return Promise
+})
