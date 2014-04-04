@@ -1,5 +1,5 @@
 !function(f) {
-  if ('object' == typeof exports) module.eports = f()
+  if ('object' == typeof exports) module.exports = f()
   else if ('function' == typeof define && define.amd) define(f)
   else if (typeof window != 'undefined') window.Promise = f()
 }(function() {
